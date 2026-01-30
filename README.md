@@ -1,7 +1,6 @@
-I have created a mini spam detector code by following below steps:
-Imported library(sklearn) with its four modules countVectorizer,MultinomialNB model, train test split and accuracy score.
-CountVectorizer converts text into numbers whereas MultinomialNB learn from the text whethers it is spam or not.
-Train model learn which words are common in spam whereas accuracy score measure accuracy on test data.
-Naivye model check probabiliy like free win more likely spam whweras words like meeting lunch more likely ham.
-We can label 1 as spam 0 as ham.
-We used an interactive loop so that user do not have to run program again and again he can as much messages he can and after finishing can use exit message.
+I have created a spam or ham detector by two models naivye bave and logistic regression with a dataset of 300-400 spam ham messages to check which is more accurate and where to use.
+Naivye Bave is basically a generative model that multiplies the word probability that how many times the word is repeating for spam( money,cash,prize,hurry) and ham( how are you, meeting, lunch, break)assuming independence which make it fast for small datasets and effective to guess the repeating words.
+If we use naivye model in large dataset rare words can create a problem to get the prediction so it is fast and accurate for small datasets only.
+Logistic Regression is a discriminative model that is used to directly estimate the probability of spam, it is more accurate for large datasets and there is no independence assumption.
+It will give true probablity from 0 to 1 like 0.87 spam, 0.50 ham 0.87 more likely to be a spam 0.50 less likely but it is ham, it needs a big dataset to give good prediction.
+It will weight small words easily like "free" likely to be a spam can move to positive weight(+2.1) word like"meeting" more likely to be a ham can move to negative weight(-1.8) this is how logistic regression gives a weight to word then with higher probablity in positive will predict spam and negative will predict ham messages.
