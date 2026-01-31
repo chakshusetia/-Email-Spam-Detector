@@ -3,8 +3,6 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics import accuracy_score, classification_report
 from sklearn.model_selection import train_test_split
-from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.naive_bayes import MultinomialNB
 
 df = pd.read_csv("email_spam_dataset.csv", encoding="utf-8")
 
@@ -53,4 +51,5 @@ while True:
     if user_input.lower() == 'exit':
         print("Goodbye!")
         break
+
     print(predict_email(user_input))
